@@ -24,35 +24,35 @@ function fetch(){
 
                         <img src=${response.avatar_url} width="100%" alt="User's Images"/>
 
-                            <h5 class="card-title mt-2 text-primary">
+                            <h5 class="card-title mt-2 text-primary" style="font-family: 'Showcard Gothic'">
                                Username:&nbsp; ${response.login}
                             </h5>
 
-                            <p class="card-text mt-3">
+                            <i><b><p class="card-text mt-3" >
                                 Name:&nbsp;${name}
-                            </p>
+                            </p></b></i>
 
-                            <p class="card-text mt-3">
+                            <i><b><p class="card-text mt-3" ">
                                 Bio:&nbsp;${bio}
+                            </p></b></i>
+                            
+                            
+                            <center><p class="card-text mt-3 " style="font-family: 'Showcard Gothic'";>
+                               Repos:&nbsp; ${response.public_repos} &nbsp;&nbsp;<button class="btn btn-primary"><a href="https://github.com/${user}/repositories">Get repositories</a></button>
                             </p>
-                            
-                            
-                            <i><p class="card-text mt-3 text-primary">
-                               Repos:&nbsp; ${response.public_repos} &nbsp;&nbsp;<button class="btn btn-danger"><a href="https://github.com/${user}/repositories">Get Repositories</a></button>
-                            </p></i>
-                            <i><p class="card-text mt-3 text-primary">
-                               Followers:&nbsp; ${response.followers} &nbsp;&nbsp;<button class="btn btn-danger"><a href="https://github.com/${user}/followers">Get Followers</a></button>
-                             </p></i>
+                            <p class="card-text mt-3" style="font-family: 'Showcard Gothic'">
+                               Followers:&nbsp; ${response.followers} &nbsp;&nbsp;<button class="btn btn-primary"><a href="https://github.com/${user}/followers">Get Followers</a></button>
+                             </p>
                              
-                             <i><p class="card-text mt-3 text-primary">
-                               Following:&nbsp; ${response.following} &nbsp;&nbsp;<button class="btn btn-danger"><a href="https://github.com/${user}/following">Get Following</a></button>
-                            </p><i>
+                             <p class="card-text mt-3" style="font-family: 'Showcard Gothic'">
+                               Following:&nbsp; ${response.following} &nbsp;&nbsp;<button class="btn btn-primary"><a href="https://github.com/${user}/following">Get Following</a></button>
+                            </p></center>
                           
                             <br>
                             
-                        <button class="mt-2 btn btn-mat text-white mx-auto">
+                        <center><button class="mt-2 btn btn-mat text-white mx-auto">
                                 ${text.link(`${response.html_url}`)}
-                        </button>
+                        </button></center>
                         </div>
                     </div>
                     `
