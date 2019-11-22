@@ -1,101 +1,4 @@
 
-function sports(){
-   
-    $.ajax({
-        type:'GET',
-        url:'https://newsapi.org/v2/top-headlines?country=in&apiKey=fabb056ff8594a2c9cd1ea680aa83aa7',
-        success: function(data){
-            console.log(data)
-            let text = 'Read More';
-           
-            let component = data.articles.map(news=>{
-                return(
-                   `
-                   <div class="card my-3">
-            
-                        <div class="card-body">
-                            <h5 class="card-title">
-                                ${news.title}
-                            </h5>
-                            
-                            <p class="card-text mt-3">
-                                ${news.description}
-                            </p>
-                            <small class="card-subtitle mb-2 text-information">
-                                Source:&nbsp;&nbsp;  ${news.source.name}
-                            </small>
-                            <br>
-                            <small class="card-subtitle mb-2 text-muted">
-                                Published at:&nbsp;&nbsp;  ${news.publishedAt.substr(0,10)}
-                             </small>
-                            <br>
-                            
-                           <button class="mt-2 btn btn-mat text-white">
-                                ${text.link(`${news.url}`)}
-                           </button>
-                        </div>
-                    </div>
-
-                   `
-                )
-            })
-
-            document.getElementById('news').innerHTML=component
-        }
-    })
-}
-
-
-
-function api(lat,long){
-    $.ajax({
-        type:'GET',
-        url:`https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/b9ec8785be758ca20484c4940d52e161/${lat},${long}`,
-        success:function(data){
-            let currently = data.currently;
-            let temp = Math.round((currently.temperature -32)*5/9)
-            let summary = currently.summary;
-            let windSpeed = currently.windSpeed;
-            let humidity = (currently.humidity)*100;
-            // console.log(data)
-            function component (){
-                return(
-                    `<div class="cards">
-                    <div class="card-body">
-                      <h5 class="card-title text-white">Temperature&nbsp;${temp}<sup>0</sup>C</h5>
-                      <h6 class="card-title mb-2 text-white">Summary:&nbsp; ${summary} </h6>
-                      <h6 class="card-title mb-2 text-white">WindSpeed:&nbsp; ${windSpeed}&nbsp;miles/hour </h6>
-                      <h6 class="card-title mb-2 text-white">Humidity:&nbsp; ${humidity}%</h6>
-                     
-                     
-                    </div>
-                  </div>
-                    `
-                )
-            }
-            document.getElementById('root').innerHTML = component();
-        }
-    })
-
-}
-
-
-function weather(){
-    
-    let lat,long;
-
-    if(navigator.geolocation){
-        navigator.geolocation.getCurrentPosition((pos)=>{
-            lat = pos.coords.latitude;
-            long = pos.coords.longitude;
-            api(lat,long)
-        })
-        
-    }
-    else{
-        api(30.5145926,76.6528112);
-    }
-}
 
 
 
@@ -121,7 +24,7 @@ function fetch(){
 
                         <img src=${response.avatar_url} width="100%" alt="User's Images"/>
 
-                            <h5 class="card-title mt-2">
+                            <h5 class="card-title mt-2 text-primary">
                                Username:&nbsp; ${response.login}
                             </h5>
 
@@ -134,20 +37,20 @@ function fetch(){
                             </p>
                             
                             
-                            <p class="card-text mt-3">
-                               Repos:&nbsp; ${response.public_repos}
-                            </p>
-                            <p class="card-text mt-3">
-                               Followers:&nbsp; ${response.followers}
-                             </p>
+                            <i><p class="card-text mt-3 text-primary">
+                               Repos:&nbsp; ${response.public_repos} &nbsp;&nbsp;<button class="btn btn-danger"><a href="https://github.com/${user}/repositories">Get Repositories</a></button>
+                            </p></i>
+                            <i><p class="card-text mt-3 text-primary">
+                               Followers:&nbsp; ${response.followers} &nbsp;&nbsp;<button class="btn btn-danger"><a href="https://github.com/${user}/followers">Get Followers</a></button>
+                             </p></i>
                              
-                             <p class="card-text mt-3">
-                               Following:&nbsp; ${response.following}
-                            </p>
+                             <i><p class="card-text mt-3 text-primary">
+                               Following:&nbsp; ${response.following} &nbsp;&nbsp;<button class="btn btn-danger"><a href="https://github.com/${user}/following">Get Following</a></button>
+                            </p><i>
                           
                             <br>
                             
-                        <button class="mt-2 btn btn-mat text-white">
+                        <button class="mt-2 btn btn-mat text-white mx-auto">
                                 ${text.link(`${response.html_url}`)}
                         </button>
                         </div>
