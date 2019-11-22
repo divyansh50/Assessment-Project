@@ -3,6 +3,10 @@ html,body{
     margin:0;
     padding:0;
     style="font-family: 'Showcard Gothic'";
+   
+    background: url(../images/github.jfif);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 a{
@@ -18,7 +22,7 @@ a:hover{
     background: #1e88e5;
 }
 .btn-mat:hover{
-    background-color: #e6891d!important;
+    background-color: #e61d92!important;
 }
 
 .btn-mat:hover a{
@@ -33,19 +37,7 @@ a:hover{
     top: 50%;
     background: url()no-repeat;
     background-size: cover ;
-    
-}
- 
-
-.home{
-    height: 100vh;
-    background: 100vw;
-    background: url(../images/github.jfif);
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-
+    }
 .input-setting{
     margin-top: 10%;
     border: none;
@@ -53,4 +45,8 @@ a:hover{
     padding: 7px;
     width: 20vw;
     border-radius: 5px;
+}
+
+.b:hover {
+    color: white;
 }

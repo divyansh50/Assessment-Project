@@ -1,8 +1,3 @@
-
-
-
-
-
 function fetch(){
     let user = document.querySelector('input').value;
     // console.log(data);
@@ -37,15 +32,15 @@ function fetch(){
                             </p></b></i>
                             
                             
-                            <center><p class="card-text mt-3 " style="font-family: 'Showcard Gothic'";>
-                               Repos:&nbsp; ${response.public_repos} &nbsp;&nbsp;<button class="btn btn-primary"><a href="https://github.com/${user}/repositories">Get repositories</a></button>
+                            <center><p class="card-text mt-3 text-primary" style="font-family: 'Showcard Gothic'";>
+                               Repos:&nbsp; ${response.public_repos} &nbsp;&nbsp;<button class="btn btn-outline-primary text-dark"><a href="https://github.com/${user}/repositories"><span class="text-dark">Get repositories</span></a></button>
                             </p>
-                            <p class="card-text mt-3" style="font-family: 'Showcard Gothic'">
-                               Followers:&nbsp; ${response.followers} &nbsp;&nbsp;<button class="btn btn-primary"><a href="https://github.com/${user}/followers">Get Followers</a></button>
-                             </p>
+                            <p class="card-text mt-3 text-primary" style="font-family: 'Showcard Gothic'">
+                               Followers:&nbsp; ${response.followers} &nbsp;&nbsp;<button class="btn btn-outline-primary"><a href="https://github.com/${user}/followers"><span class="text-dark">Get Followers</span></a></button>
+                            </p>
                              
-                             <p class="card-text mt-3" style="font-family: 'Showcard Gothic'">
-                               Following:&nbsp; ${response.following} &nbsp;&nbsp;<button class="btn btn-primary"><a href="https://github.com/${user}/following">Get Following</a></button>
+                            <p class="card-text mt-3 text-primary" style="font-family: 'Showcard Gothic'">
+                               Following:&nbsp; ${response.following} &nbsp;&nbsp;<button class="btn btn-outline-primary"><a href="https://github.com/${user}/following" class=b><span class="text-dark b">Get Following</span></a></button>
                             </p></center>
                           
                             <br>
