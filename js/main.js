@@ -13,7 +13,7 @@ function fetch(){
                 return(
                     `
 
-                    <div class="card my-3" style="width:18rem">
+                    <div class="card my-3" style="width:28rem">
             
                         <div class="card-body">
 
@@ -32,8 +32,10 @@ function fetch(){
                             </p></b></i>
                             
                             
-                            <center><p class="card-text mt-3 text-primary" style="font-family: 'Showcard Gothic'";>
-                               Repos:&nbsp; ${response.public_repos} &nbsp;&nbsp;<button class="btn btn-outline-primary text-dark"><a href="https://github.com/${user}/repositories"><span class="text-dark">Get repositories</span></a></button>
+                            <center>
+                            
+                            <p class="card-text mt-3 text-primary" style="font-family: 'Showcard Gothic'";>
+                               Repositories:&nbsp; ${response.public_repos} &nbsp;&nbsp;<button class="btn btn-outline-primary "><a href="https://github.com/${user}/repositories"><span class="text-dark">Get repositories</span></a></button>
                             </p>
                             <p class="card-text mt-3 text-primary" style="font-family: 'Showcard Gothic'">
                                Followers:&nbsp; ${response.followers} &nbsp;&nbsp;<button class="btn btn-outline-primary"><a href="https://github.com/${user}/followers"><span class="text-dark">Get Followers</span></a></button>
@@ -45,9 +47,11 @@ function fetch(){
                           
                             <br>
                             
-                        <center><button class="mt-2 btn btn-mat text-white mx-auto">
+                        <center>
+                            <button class="mt-2 btn btn-mat text-white mx-auto">
                                 ${text.link(`${response.html_url}`)}
-                        </button></center>
+                            </button>
+                        </center>
                         </div>
                     </div>
                     `

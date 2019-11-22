@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-html,body{
+html,body
+{
     margin:0;
     padding:0;
     style="font-family: 'Showcard Gothic'";
-   
-    background: url(../images/github.jfif);
+   background: url(../images/github.jfif);
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -14,23 +14,29 @@ a{
     text-decoration: none;
 }
 
-a:hover{
+a:hover
+{
     text-decoration: none;
 }
 
-.btn-mat{
+
+.btn-mat
+{
     background: #1e88e5;
 }
-.btn-mat:hover{
+.btn-mat:hover
+{
     background-color: #e61d92!important;
 }
 
-.btn-mat:hover a{
+.btn-mat:hover a
+{
     color: white;
 }
 
 
-.backdrop{
+.backdrop
+{
     position: absolute;
     height: 400px;
     width: 60vw;
@@ -38,7 +44,8 @@ a:hover{
     background: url()no-repeat;
     background-size: cover ;
     }
-.input-setting{
+.input-setting
+{
     margin-top: 10%;
     border: none;
     outline: none;
@@ -47,6 +54,7 @@ a:hover{
     border-radius: 5px;
 }
 
-.b:hover {
+.b:hover 
+{
     color: white;
 }

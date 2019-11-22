@@ -1,0 +1,25 @@
+body
+{
+    background-image: url("social.jpg");
+    background-repeat: no-repeat;     
+    background-size: 100% 100%                  
+}
+.headers
+{    height:100%;
+    border-radius: 450px;   
+}
+.header
+{
+    padding-top: 55%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.btn:hover
+{
+    background-color: #eb45e2;
+    text-decoration: underline;
+}
+.btn
+{
+    background-color: #1b96dd;
+}
